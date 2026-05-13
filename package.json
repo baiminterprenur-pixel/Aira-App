@@ -1,6 +1,3 @@
-# package.json
-
-```json
 {
   "name": "aira-app",
   "private": true,
@@ -13,144 +10,11 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.55.0",
-    "react-icons": "^5.4.0",
-    "framer-motion": "^12.0.0",
-    "lucide-react": "^0.511.0",
-    "wouter": "^3.3.5",
-    "zod": "^3.25.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.1",
     "typescript": "^5.9.2",
     "vite": "^5.4.10"
   }
 }
-```
-
----
-
-# tsconfig.json
-
-```json
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "Node",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": false
-  },
-  "include": ["src"],
-  "references": []
-}
-```
-
----
-
-# vite.config.ts
-
-```ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-})
-```
-
----
-
-# index.html
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aira App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-```
-
----
-
-# src/main.tsx
-
-```tsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
-```
-
----
-
-# src/App.tsx
-
-```tsx
-export default function App() {
-  return (
-    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>Aira App Berhasil Jalan 🚀</h1>
-      <p>Deploy Vercel berhasil.</p>
-    </div>
-  )
-}
-```
-
----
-
-# Struktur Folder Yang Benar
-
-```text
-aira-app/
- ├── src/
- │    ├── App.tsx
- │    └── main.tsx
- ├── package.json
- ├── tsconfig.json
- ├── vite.config.ts
- └── index.html
-```
-
----
-
-# Langkah Setelah Copas
-
-1. Simpan semua file.
-2. Upload ke GitHub.
-3. Deploy ke Vercel.
-4. Pengaturan Vercel:
-
-Build Command:
-
-```text
-npm run build
-```
-
-Output Directory:
-
-```text
-dist
-```
